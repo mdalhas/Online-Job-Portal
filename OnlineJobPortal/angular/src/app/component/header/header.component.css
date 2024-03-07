@@ -1,0 +1,115 @@
+/* navbar.component.css */
+
+.navbar {
+  background: linear-gradient(to right, #4e54c8, #8f94fb); /* Gradient background color */
+}
+
+.navbar-brand {
+  color: #ffffff; /* Navbar brand text color */
+}
+
+.navbar-brand:hover {
+  color: #ffffff; /* Navbar brand text color on hover */
+}
+
+.navbar-nav .nav-link {
+  color: #ffffff; /* Navbar link text color */
+}
+
+.navbar-nav .nav-link:hover {
+  color: #ffffff; /* Navbar link text color on hover */
+}
+
+.navbar-toggler-icon {
+  background-color: #ffffff; /* Navbar toggler icon color */
+}
+
+.navbar-text {
+  color: #ffffff; /* Text color for welcome message and user name */
+}
+
+
+
+
+/* Custom styles for the icons */
+.navbar-nav .nav-link i {
+  margin-right: 5px; /* Adjust the spacing between icon and text */
+}
+
+/* Custom styles for the active link */
+.navbar-nav .nav-item.active .nav-link {
+  background-color: #e0e0e0; /* Background color for active link */
+  color: #343a40; /* Text color for active link */
+}
+
+
+
+
+
+
+
+
+.profile-image img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+
+
+
+.navbar-text {
+  display: flex;
+  align-items: center;
+}
+
+.texted {
+  color: #0aeeb5; /* Blue color */
+  font-weight: bolder;
+  margin-right: 10px;
+  font-size: large;
+  cursor: pointer;
+}
+
+.btn-light {
+  background-color: #eaeeee;
+  color: #a00df5; /* Blue color */
+  border: 1px solid #3498db; /* Blue border */
+}
+
+.btn-light:hover {
+  background-color: #f50a64; /* Blue color on hover */
+  color: #f3efef;
+}
+
+.form-inline {
+  display: flex;
+  align-items: center;
+}
+
+.btn-sign {
+  margin-right: 10px;
+}
+
+.btn-login {
+  background-color: #3498db; /* Blue color */
+  color: #ec0e0e;
+  border: 1px solid #3498db; /* Blue border */
+  margin-right: 10px;
+}
+
+.btn-login:hover {
+  background-color: #218838; /* Darker green on hover */
+  border-color: #218838; /* Darker green border on hover */
+}
+
+.btn-signup {
+  background-color: #28a745; /* Green color */
+  color: #ff0d0d;
+  border: 1px solid #28a745; /* Green border */
+}
+
+.btn-signup:hover {
+  background-color: #218838; /* Darker green on hover */
+  border-color: #218838; /* Darker green border on hover */
+}

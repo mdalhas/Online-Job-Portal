@@ -1,0 +1,6 @@
+.back-box {
+    background: #3498db; /* Blue */
+    background: linear-gradient(to right, #3498db, #2ecc71, #e74c3c); /* Gradient Blue to Green to Red */
+    width: 100%;
+    
+  }

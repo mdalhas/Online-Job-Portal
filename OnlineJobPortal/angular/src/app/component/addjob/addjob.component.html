@@ -1,0 +1,78 @@
+<!-- addjob.component.html -->
+<div class="back-box">
+<div class="container p-2 ">
+  <div class="col-md-10 offset-md-1">
+    <div class="card">
+      <div class="card-body">
+        <div class="text-center text-success" style="text-align: center">
+          <i class="fas fa-user-friends fa-3x text-success"></i>
+          <h5>Add Jobs</h5>
+        </div>
+        <form (ngSubmit)="createJob()" #jobForm="ngForm">
+
+          <div class="form-group">
+            <label for="title">Enter Title</label>
+            <input type="text" class="form-control" id="title" name="title" [(ngModel)]="selectedJob.title" required>
+          </div>
+
+          <div class="form-group">
+            <div style="display: flex; justify-content: space-between;">
+
+              <div style="flex-grow: 1; margin-right: 5px;">
+                <label for="location">Location</label>
+                <select id="location" name="location" [(ngModel)]="selectedJob.location" class="custom-select" style="width: 100%;" required>
+                  <option value="Choice">--Select one--</option>
+                  <option value="Dhaka">Dhaka</option>
+                  <option value="Barisal">Barisal</option>
+                  <option value="Shylet">Shylet</option>
+                  <option value="Chittagong">Chittagong</option>
+                  <option value="Khulna">Khulna</option>
+                  <option value="Mymensingh">Mymensingh</option>
+                  <option value="Rajshahi">Rajshahi</option>
+                  <option value="Rangpur">Rangpur</option>
+                </select>
+              </div>
+
+              <div style="flex-grow: 1; margin-right: 5px;">
+                <label for="category">Category</label>
+                <select id="category" name="category" [(ngModel)]="selectedJob.category" class="custom-select" style="width: 100%;" required>
+                  <option value="Choice">--Select one--</option>
+                  <option value="IT">IT</option>
+                  <option value="Developer">Developer</option>
+                  <option value="Engineer">Engineer</option>
+                  <option value="Nurse">Nurse</option>
+                  <option value="Doctor">Doctor</option>
+                  <option value="Trainer">Trainer</option>
+                  <option value="Java Programmer">Java Programmer</option>
+                </select>
+              </div>
+
+              <div style="flex-grow: 1;">
+                <label for="status">Status</label>
+                <select id="status" name="status" [(ngModel)]="selectedJob.status" class="form-control" style="width: 100%;" required>
+                  <option value="Choice">--Select one--</option>
+                  <option value="active">Active</option>
+                  <option value="inactive">Inactive</option>
+                </select>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="description">Enter Description</label>
+            <textarea id="description" name="description" [(ngModel)]="selectedJob.description" rows="5" class="form-control" required></textarea>
+          </div>
+
+          <div class="form-group">
+            <label for="deadlinedate">Deadline</label>
+            <input type="date" class="form-control" id="deadlinedate" name="deadlinedate" [(ngModel)]="selectedJob.deadlinedate" required>
+          </div>
+
+          <button type="submit" [disabled]="!jobForm.valid" class="mt-3">Publish Job</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+</div>

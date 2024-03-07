@@ -1,0 +1,135 @@
+<!-- user-profile.component.html -->
+
+<div class="profile-container" *ngIf="user">
+  <div class="profile-header">
+    <h2>User Profile</h2>
+
+  
+    <button *ngIf="!editing" (click)="editUser()">Edit</button>
+
+   
+    <button *ngIf="editing" (click)="cancelEdit()">Cancel</button>
+    <button *ngIf="editing" (click)="saveUser()">Save</button>
+    <button (click)="deleteUser()">Delete Account</button>
+  </div>
+
+  <div *ngIf="!editing" class="profile-details">
+    <div class="user-details">
+      <div><strong>Name:</strong> {{ user.name }}</div>
+      <div><strong>Email:</strong> {{ user.email }}</div>
+      <div><strong>Qualification:</strong> {{ user.qualification }}</div>
+      <div><strong>Cell No:</strong> {{ user.cellNo }}</div>
+      <div><strong>Gender:</strong> {{ user.gender }}</div>
+      <div><strong>Date of Birth:</strong> {{ user.dob | date: 'mediumDate' }}</div>
+
+    </div>
+
+    <div class="profile-image">
+      <img src="{{user.image}}" alt="Profile Image">
+    </div>
+
+  </div>
+
+  <ng-container *ngIf="editing">
+    <form>
+      <div class="form-group">
+        <label for="editedName">Name:</label>
+        <input id="editedName" [(ngModel)]="editedUser!.name" name="editedName" class="form-control" required />
+      </div>
+    
+      <div class="form-group">
+        <label for="editedEmail">Email:</label>
+        <input id="editedEmail" [(ngModel)]="editedUser!.email" name="editedEmail" class="form-control" required />
+      </div>
+    
+      <div class="form-group">
+        <label for="editedPassword">Password:</label>
+        <input id="editedPassword" [(ngModel)]="editedUser!.password" name="editedPassword" class="form-control" required />
+      </div>
+    
+      <div class="form-group">
+        <label for="editedQualification">Qualification:</label>
+        <select id="editedQualification" [(ngModel)]="editedUser!.qualification" name="editedQualification" class="form-control">
+          <option value="High School">High School</option>
+          <option value="Bachelor's Degree">Bachelor's Degree</option>
+          <option value="Master's Degree">Master's Degree</option>
+          <option value="PhD">PhD</option>
+          <!-- Add more options as needed -->
+        </select>
+      </div>
+    
+      <div class="form-group">
+        <label for="editedCellNo">Cell No:</label>
+        <input id="editedCellNo" [(ngModel)]="editedUser!.cellNo" name="editedCellNo" class="form-control" />
+      </div>
+    
+      <div class="form-group">
+        <label>Gender:</label>
+        <div class="row">
+          <div class="col-md-3">
+            <div class="form-check">
+              <input type="radio" id="male" name="editedGender" [(ngModel)]="editedUser!.gender" value="Male" class="form-check-input">
+              <label for="male" class="form-check-label">Male</label>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="form-check">
+              <input type="radio" id="female" name="editedGender" [(ngModel)]="editedUser!.gender" value="Female" class="form-check-input">
+              <label for="female" class="form-check-label">Female</label>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="form-check">
+              <input type="radio" id="other" name="editedGender" [(ngModel)]="editedUser!.gender" value="Other" class="form-check-input">
+              <label for="other" class="form-check-label">Other</label>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      
+    
+      <div class="form-group">
+        <label for="editedRole">Role:</label>
+        <input id="editedRole" [(ngModel)]="editedUser!.role" name="editedRole" class="form-control" />
+      </div>
+    
+     
+      
+
+      <div class="form-group">
+        <label for="editedDob"><i class="far fa-calendar-alt"></i> Date of Birth:</label>
+        <input type="date" class="form-control" id="editedDob" name="editedDob" [(ngModel)]="editedUser!.dob" />
+      </div>
+      
+      
+      
+    
+    <div class="form-group">
+  <label for="editedImage">Image:</label>
+  <input id="editedImage" [(ngModel)]="editedUser!.image" placeholder="assets/img/profile-pic.png" name="editedImage" class="form-control" />
+</div>
+
+    
+      <div class="form-group">
+        <label for="editedIsEnable">Is Enable:</label>
+        <input id="editedIsEnable" [(ngModel)]="editedUser!.isEnable" name="editedIsEnable" class="form-control" />
+      </div>
+    
+      <!-- Assuming jobApplications is an array, you might want to handle it separately -->
+    
+      <div class="btn-group" role="group" aria-label="Form Actions">
+        <button type="button" (click)="saveUser()" class="btn btn-success">Save</button>
+        <button type="button" (click)="cancelEdit()" class="btn btn-secondary">Cancel</button>
+      </div>
+    </form>
+    
+    
+  </ng-container>
+</div>
+
+
+
+
+
+

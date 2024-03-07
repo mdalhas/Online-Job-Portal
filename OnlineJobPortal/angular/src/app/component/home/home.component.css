@@ -1,0 +1,49 @@
+/* styles.css (or your component-specific styles file) */
+
+.back-box {
+  background-image: url('/assets/img/imghome.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+}
+
+.back-box {
+  background: #3498db; /* Blue */
+  background: linear-gradient(to right, #3498db, #2ecc71, #e74c3c); /* Gradient Blue to Green to Red */
+  width: 100%;
+  height: 540px;
+}
+
+.text-colo {
+  color: rgb(5, 233, 214);
+  height: 60px;
+  width: 400px;
+  background-color: rgb(34, 6, 160);
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px; /* Adding rounded corners for a softer look */
+ 
+}
+
+
+
+.container-fluid p {
+  color: #fff;
+  max-width: 800px;
+  margin: 0 auto;
+
+  text-align: center;
+  padding: 20px;
+  font-size: 18px;
+  line-height: 1.5;
+  text-align: justify;
+  background-color: rgba(34, 6, 160, 0.9); /* Slightly transparent background */
+  border-radius: 12px; /* Adding rounded corners for a softer look */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adding a subtle shadow for depth */
+}

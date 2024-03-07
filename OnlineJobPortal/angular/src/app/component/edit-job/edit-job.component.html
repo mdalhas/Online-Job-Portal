@@ -1,0 +1,76 @@
+<!-- edit-job.component.html -->
+
+<div class="container">
+    <h2>Edit Job</h2>
+  
+    <form (ngSubmit)="onSubmit()" #editJobForm="ngForm">
+  
+      <!-- Job Details -->
+      <div class="card mt-4">
+        <div class="card-body">
+  
+          <!-- Title -->
+          <div class="form-group">
+            <label for="title"><i class="fas fa-heading"></i> Title</label>
+            <input type="text" class="form-control" id="title" name="title" [(ngModel)]="editedJob.title" required>
+          </div>
+  
+          <!-- Description -->
+          <div class="form-group">
+            <label for="description"><i class="fas fa-file-alt"></i> Description</label>
+            <textarea class="form-control" id="description" name="description" [(ngModel)]="editedJob.description" required></textarea>
+          </div>
+  
+          <!-- Location and Category in the same row -->
+          <!-- Location and Category in the same row -->
+<!-- Location, Category in one row -->
+<div class="form-row">
+  <div class="form-group col-md-6">
+    <label for="location"><i class="fas fa-map-marker-alt"></i> Location</label>
+    <input type="text" class="form-control" id="location" name="location" [(ngModel)]="editedJob.location" required>
+  </div>
+
+  <div class="form-group col-md-6">
+    <label for="category"><i class="fas fa-briefcase"></i> Category</label>
+    <input type="text" class="form-control" id="category" name="category" [(ngModel)]="editedJob.category" required>
+  </div>
+</div>
+
+<!-- Status, Date in another row -->
+<div class="form-row">
+  <!-- Status -->
+<!-- Status -->
+
+    <div class="form-group col-md-6 ">
+      <label for="status"><i class="fas fa-info-circle"></i> Status</label>
+      <input type="text" class="form-control" id="status" name="status" [(ngModel)]="editedJob.status" required>
+    </div>
+  
+
+    
+    <div class="form-group col-md-6 ">
+      <label for="pdate"><i class="far fa-calendar-alt"></i> Date</label>
+      <input type="date" class="form-control" id="pdate" name="pdate" [(ngModel)]="editedJob.pdate" required>
+    </div>
+ 
+
+
+</div>
+
+  
+          <!-- Job Applications - You can customize this section based on your model structure -->
+          <div class="form-group">
+            <label for="jobApplications"><i class="fas fa-users"></i> Job Applications</label>
+            <!-- You can add input fields or any other structure based on your model -->
+          </div>
+  
+          <!-- Submit Button -->
+          <button type="submit" class="btn btn-primary" [disabled]="!editJobForm.valid">
+            <i class="fas fa-save"></i> Update Job
+          </button>
+  
+        </div>
+      </div>
+  
+    </form>
+  </div>

@@ -1,0 +1,58 @@
+<!-- navbar.component.html -->
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-custom">
+  <a class="navbar-brand" routerLink="/homecomp">Job Portal</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item" routerLinkActive="active">
+        <a class="nav-link active" routerLink="/homecomp"><i class="fas fa-home"></i> Home <span
+            class="sr-only">(current)</span></a>
+      </li>
+      <!-- <li class="nav-item" routerLinkActive="active">
+        <a class="nav-link" routerLink="/addjob"><i class="fas fa-plus"></i> Add Job</a>
+      </li> -->
+      <li class="nav-item" routerLinkActive="active">
+        <a class="nav-link" routerLink="/viewalljob"><i class="fas fa-eye"></i> View All Jobs</a>
+      </li>
+
+      <li class="nav-item" routerLinkActive="active">
+        <a class="nav-link" routerLink="/employer"><i class="fas fa-user"></i> Employer</a>
+      </li>
+
+      <!-- <li class="nav-item" routerLinkActive="active">
+        <a class="nav-link" routerLink="/useredit"><i class="fas fa-user"></i> Edit user  Profile</a>
+      </li> -->
+
+      <!-- <li class="nav-item" routerLinkActive="active">
+        <a class="nav-link" routerLink="/uploadfile"><i class="fas fa-user"></i> Add CV</a>
+      </li> -->
+    </ul>
+  </div>
+      <div>
+              <div *ngIf="loggedInUser; else showLoginButtons" class="navbar-text   ">
+                <!-- Use ml-auto directly on navbar-text -->
+                <div class="profile-image">
+                  <img src="{{loggedInUser.image}}" alt="Profile Image">
+                </div>
+                <span class="texted pr-7 " style=" margin-right: 10px;" routerLink="/userprofile"> {{ loggedInUser.name }}</span>
+
+                <button class="btn btn-light ml-10" (click)="logout()" style=" margin-right: 10px;">
+                  <i class="fas fa-sign-out-alt" ></i> Logout
+                </button>
+              </div>
+
+              <ng-template #showLoginButtons>
+                <form class="form-inline my-2 my-lg-0">
+                  <a routerLink="/login" class="btn btn-light mr-10 " style=" margin-right: 10px;"><i class="fas fa-sign-in-alt"></i> Login</a>
+                  <a routerLink="/signup" class="btn btn-light ml-1" style=" margin-right: 10px;"><i class="fas fa-user"></i> SignUp</a>
+                </form>
+              </ng-template>
+
+      </div>
+  
+</nav>

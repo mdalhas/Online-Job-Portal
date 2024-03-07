@@ -1,0 +1,123 @@
+<!-- jobs.component.html -->
+<div class="back-box">
+<div class="container">
+  <h2>Jobs List</h2>
+
+  <!-- Form for searching -->
+  <!-- jobs.component.html -->
+
+  <div class="card mt-2">
+    <div class="card-body">
+      <div class="d-flex justify-content-between">
+        <div class="form-group col-md-2">
+          <label for="inlineFormCustomSelectPref"><i class="fas fa-map-marker-alt"></i> Location</label> <br>
+          <select [(ngModel)]="searchLocation" name="location" class="custom-select" id="inlineFormCustomSelectPref">
+            <option value="Choice">--Select one--</option>
+            <option value="Dhaka">Dhaka</option>
+            <option value="Barisal">Barisal</option>
+            <option value="Shylet">Shylet</option>
+            <option value="Chittagong">Chittagong</option>
+            <option value="Khulna">Khulna</option>
+            <option value="Mymensingh">Mymensingh</option>
+            <option value="Rajshahi">Rajshahi</option>
+            <option value="Rangpur">Rangpur</option>
+            <!-- Add other location options as needed -->
+          </select>
+        </div>
+
+        <div class="form-group col-md-3">
+          <label for="categorySelect"><i class="fas fa-briefcase"></i> Category</label>
+          <select [(ngModel)]="searchCategory" name="category" class="custom-select" id="categorySelect">
+            <option value="Choice">--Select one--</option>
+                  <option value="IT">IT</option>
+                  <option value="Developer">Developer</option>
+                  <option value="Engineer">Engineer</option>
+                  <option value="Nurse">Nurse</option>
+                  <option value="Doctor">Doctor</option>
+                  <option value="Trainer">Trainer</option>
+                  <option value="Java Programmer">Java Programmer</option>
+            <!-- Add other category options as needed -->
+          </select>
+        </div>
+
+        <div class="form-group col-md-3 mt-2">
+          <button type="button" class="btn btn-primary" id="searchButton" (click)="onSearch()"><i
+              class="fas fa-search"></i> Search</button>
+        </div>
+
+        <div class="form-group col-md-3 mt-2">
+          <button type="button" class="btn btn-secondary" id="resetButton" (click)="resetSearch()"><i
+              class="fas fa-times"></i> Reset</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div *ngIf="searchResults.length > 0 || (!searchLocation && !searchCategory)">
+    <h3>{{ searchResults.length > 0 ? 'Search Results' : '' }}</h3>
+    <ul>
+      <li *ngFor="let job of (searchResults.length > 0 ? searchResults : jobs)" class="card mt-2">
+        <div class="card-body">
+          <div class="text-center text-primary">
+
+
+
+            <div class="text-center">
+              <div class="button-group">
+                <button (click)="navigateToJobApplicantList(job.id)" class="custom-btn">
+                  <i class="fas fa-eye"></i> Applicants
+                </button>
+                <a [routerLink]="['/seemorejobdetails', job.id]" class="custom-btn">
+                  <i class="fas fa-check"></i> short List
+                </a>
+              </div>
+            </div>
+
+
+
+          </div>
+
+          <br>
+          <h3 class="card-title text-center">Job Title: <strong> {{ job.title}}</strong></h3>
+<br>
+          <p class="card-text"> <i class="fas fa-file-alt"></i>Job description: <strong> {{ job.description}} </strong></p>
+           <div class="row">
+            <div class="col-md-4">
+              <p><i class="fas fa-map-marker-alt"></i> Location: {{ job.location }}</p>
+            </div>
+            <div class="col-md-4">
+              <p><i class="fas fa-briefcase"></i> Category: {{ job.category }}</p>
+            </div>
+            <div class="col-md-4">
+              <p><i class="far fa-clock"></i> Status: {{ job.status }}</p>
+            </div>
+          </div>
+          <p *ngIf="job.pdate"><i class="far fa-clock"></i> {{ job.pdate | date:'EEE, MMM dd, yyyy' }}</p>
+          <div class="text-center">
+            <a [routerLink]="['/seemorejobdetails', job.id]" class="btn btn-sm bg-success text-white">
+              <i class="fas fa-search"></i> See More & Apply
+            </a>
+          </div>
+          <!-- Add buttons for edit and delete -->
+          <div class="row mt-2">
+            <div class="col-md-6 text-center">
+
+
+              <a [routerLink]="['/editJob', job.id]" class="btn btn-sm bg-warning text-white">
+                <i class="fas fa-pencil-alt"></i> Edit
+              </a>
+            </div>
+            <div class="col-md-6 text-center">
+              <button class="btn btn-sm bg-danger text-white" (click)="deleteJob(job.id)">
+                <i class="fas fa-trash"></i> Delete
+              </button>
+            </div>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
+
+</div>

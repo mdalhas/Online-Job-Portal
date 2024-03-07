@@ -1,0 +1,65 @@
+<!-- job-see-more.component.html -->
+
+<div class="container" *ngIf="job">
+    <h3 class="text-center mt-4"> Job Details</h3>
+    <div class="card mt-2">
+      <div class="card-body">
+        <div class="text-center text-primary">
+          <i class="far fa-clipboard fa-3x"></i>
+        </div>
+        <h2 class="card-title">{{ job.title }}</h2>
+        <br>
+        <p class="card-text">{{ job.description }}</p>
+        <div class="row">
+          <div class="col-md-4">
+            <p><i class="fas fa-map-marker-alt"></i> Location: {{ job.location }}</p>
+          </div>
+          <div class="col-md-4">
+            <p><i class="fas fa-briefcase"></i> Category: {{ job.category }}</p>
+          </div>
+          <div class="col-md-4">
+            <p><i class="far fa-clock"></i> Status: {{ job.status }}</p>
+          </div>
+        </div>
+        <p *ngIf="job.pdate"><i class="far fa-clock"></i> Publish Date: {{ job.pdate | date:'EEE, MMM dd, yyyy' }}</p>
+        <div class="text-center">
+          <h3> <p><i class="far fa-calendar-times"></i> Job Deadline: <b>{{ job.deadlinedate | date:'EEE, MMM dd, yyyy' }}</b></p>
+          </h3>
+          <br>
+          <div class="seemoreStaticData">
+            <h3>Age: 23 to 32 years</h3>
+            <h3>Requirements & Education Qualification</h3>
+            <ul>
+              <li>Graduation must be completed</li>
+              <li>Educational qualification will be considered if you have any skills according to the company's needs.
+                Have proven computer skills on MS word, Excel, Power point Strong communication, report writing, and
+                presentation skill both in Bangla and English. Able to work under pressure and complete the task within a
+                preset time-frame.
+              </li>
+              <li>Have to be an expert in <b>{{ job.title }}</b> </li>
+              <li>No job experience is necessary but have to be more active and productive </li>
+            </ul>
+            <br>
+            <p><strong>Gender:</strong> Both Males and Females </p>
+            
+          </div>
+          <div class="text-center">
+            <div class="button-group">
+              <button *ngIf="!hasApplied" (click)="applyForJob(job.id)" class="custom-btn">
+                <i class="fas fa-search"></i> Apply
+              </button>
+
+              <a [routerLink]="['/uploadfile']" class="custom-btn">
+                <i class="fas fa-upload"></i> Upload CV
+              </a>
+ <!-- <li class="nav-item" routerLinkActive="active">
+        <a class="nav-link" routerLink="/uploadfile"><i class="fas fa-user"></i> Add CV</a>
+      </li> -->
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

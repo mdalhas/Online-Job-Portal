@@ -1,0 +1,26 @@
+.seemoreStaticData{
+    text-align: left;
+}
+
+/* job.component.css */
+
+.button-group {
+    /* display: flex; */
+    justify-content: space-between; /* Adjust spacing as needed */
+  }
+  
+  .custom-btn {
+    padding: 8px 16px; /* Adjust padding as needed */
+    margin-right: 8px; /* Adjust margin as needed */
+    text-decoration: none;
+    color: #fff;
+    background-color: #28a745; /* Green color */
+    border: 1px solid #28a745; /* Border color same as background for a cleaner look */
+    border-radius: 4px;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  .custom-btn:hover {
+    background-color: #218838; /* Darker green on hover */
+  }
+  
