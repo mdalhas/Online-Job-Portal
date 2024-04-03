@@ -39,3 +39,30 @@ This is an online job portal project built with Spring Boot for the backend and 
    ## Screenshots
 
 ![App Screenshot](https://github.com/mdalhas/Online-Job-Portal/blob/main/OnlineJobPortal/job-portal-screenshoot/home-1.PNG)
+![App Screenshot](https://github.com/mdalhas/Online-Job-Portal/blob/main/OnlineJobPortal/job-portal-screenshoot/SignUp.png)
+![App Screenshot](https://github.com/mdalhas/Online-Job-Portal/blob/main/OnlineJobPortal/job-portal-screenshoot/LoginPage.png)
+![App Screenshot](https://github.com/mdalhas/Online-Job-Portal/blob/main/OnlineJobPortal/job-portal-screenshoot/employerWelcome.png)
+![App Screenshot](https://github.com/mdalhas/Online-Job-Portal/blob/main/OnlineJobPortal/job-portal-screenshoot/jobPost.png)
+![App Screenshot](https://github.com/mdalhas/Online-Job-Portal/blob/main/OnlineJobPortal/job-portal-screenshoot/editJob.png)
+![App Screenshot](https://github.com/mdalhas/Online-Job-Portal/blob/main/OnlineJobPortal/job-portal-screenshoot/employerJobPost-edit-details.png)
+![App Screenshot](https://github.com/mdalhas/Online-Job-Portal/blob/main/OnlineJobPortal/job-portal-screenshoot/all-job-for-user.PNG)
+![App Screenshot](https://github.com/mdalhas/Online-Job-Portal/blob/main/OnlineJobPortal/job-portal-screenshoot/jobSeeMOrePage.png)
+![App Screenshot]()
+![App Screenshot]()
+![App Screenshot]()
+![App Screenshot]()
+![App Screenshot]()
+![App Screenshot]()
+![App Screenshot]()
+![App Screenshot]()
+![App Screenshot]()
+![App Screenshot]()
+![App Screenshot]()
+![App Screenshot]()
+![App Screenshot]()
+![App Screenshot]()
+![App Screenshot]()
+![App Screenshot]()
+
+
+
