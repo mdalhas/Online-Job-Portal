@@ -35,3 +35,7 @@ This is an online job portal project built with Spring Boot for the backend and 
 1. **Clone the repository:**
    ```bash
    git clone https://github.com/mdalhas/online-job-portal.git
+
+   ## Screenshots
+
+![App Screenshot](https://github.com/mdalhas/Online-Job-Portal/blob/main/OnlineJobPortal/job-portal-screenshoot/home-1.PNG)
